@@ -41,11 +41,11 @@ app.use(
     
     connection(mysql,{
         
-        host: process.env.rds_endpoint, //'localhost',
-        user: process.env.rds_username,
-        password : process.env.rds_password,
+        host: process.env.MYSQL_ENDPOINT, //'localhost',
+        user: process.env.MYSQL_USER,
+        password : process.env.MYSQL_PASSWORD,
         port : 3306, 
-        database: process.env.rds_dbname
+        database: process.env.MYSQL_DATABASE
 
     },'pool') //or single
 
