@@ -7,6 +7,9 @@
 -- Versi Server: 5.5.34
 -- Versi PHP: 5.4.22
 
+CREATE DATABASE nodejs;
+use nodejs;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -51,3 +54,7 @@ INSERT INTO `customer` (`id`, `name`, `address`, `email`, `phone`) VALUES
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+GRANT ALL ON nodejs.* TO root@'%' IDENTIFIED BY 'password';
+FLUSH PRIVILEGES;
